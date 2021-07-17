@@ -1,23 +1,25 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import Img from "gatsby-image"
+import { useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby'
+
+import * as S from './styled'
 
 const Avatar = () => {
-    const { avatarImage } = useStaticQuery(
+    const { data } = useStaticQuery(
         graphql`
         query {
-            avatarImage: file(relativePath: { eq: "pp.jpeg"}) {
-              childImageSharp {
+            data: file(relativePath: { eq: "gatsby-icon.png"}) {
+              childImageSharp{
                   fixed(width: 60, height: 60) {
-                      ...GatsbyImageSharpFixed
+                      ...GatsbyImageSharpFixed_tracedSVG
                   }
-              } 
+                } 
             }
         }`
     )
 
     return ( 
-        <Img fixed={avatarImage.childImageSharp.fixed} />
+        <S.AvatarWrapper fixed={data.childImageSharp.fixed} />
      );
 }
  
