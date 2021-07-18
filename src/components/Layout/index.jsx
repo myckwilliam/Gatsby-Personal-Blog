@@ -1,4 +1,6 @@
 import Sidebar from '../Sidebar'
+import MenuBar from '../Menubar'
+import PostItem from '../PostItem'
 
 import * as React from "react"
 import PropTypes from "prop-types"
@@ -13,7 +15,29 @@ const Layout = ({ children }) => {
         <S.LayoutWrapper>
           <GlobalStyles/>
           <Sidebar /> 
-          <S.LayoutMain>{children}</S.LayoutMain>
+          <MenuBar />
+          <S.LayoutMain>
+            <PostItem />
+            <PostItem />
+            <PostItem />
+            <PostItem />
+            <PostItem />
+            <PostItem />
+            <PostItem />
+            <PostItem />
+            <PostItem />
+            <PostItem />
+            <PostItem />
+            <PostItem />
+            <PostItem />
+            <PostItem />
+            <PostItem />
+            <PostItem />
+            <PostItem />
+            <PostItem />
+            <PostItem />
+            <PostItem />
+          </S.LayoutMain>
         </S.LayoutWrapper>
   )  
 }

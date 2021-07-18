@@ -36,6 +36,7 @@ body {
 	line-height: 1;
     font-size: 100%;
     font-family: --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	
 }
 ol, ul {
 	list-style: none;
@@ -51,6 +52,20 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #192734;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1fa1f2;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+ /* creates padding around scroll thumb */
 }
 `
 

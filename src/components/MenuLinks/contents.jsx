@@ -1,4 +1,4 @@
-export const links = [
+const links = [
     {
         label: "Home",
         url: '/'
@@ -8,3 +8,5 @@ export const links = [
         url: '/about'
     }
 ]
+
+export default links;
